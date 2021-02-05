@@ -28,6 +28,7 @@ body {
 	text-align: center; /* This centers the text within its container */
 }
 
+
 /* Navbar hover effect */
 .Navbar a:hover {
 	background-color: #F4F4F4; /*  This defines the background color that will display when you hover over the text on the navbar */
@@ -138,6 +139,13 @@ body {
     display: table;
     clear: both;
 }
+
+/* Makes contact form button slide in from right on page load */
+@keyframes movePopup {
+    from {right: -40vw;}
+    to {bottom: 1.75vw;}
+}
+
 /*  Contact form */
 input[type=text] {
     width: 100%;
@@ -186,3 +194,91 @@ footer {
     text-align: justify;
     color: #ccc;
 }
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.Pop_Up_Button {
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;  
+    background-color: white;
+    color: black;
+    border: solid;
+    cursor: pointer;
+    position: fixed;
+    -webkit-animation: movePopup 5s;
+    animation: movePopup 5s;
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    border: 3px solid #f0f1f0;
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: 6px;
+    right: 6px;
+  }
+  
+  /* Form styling */
+  .form-container {
+    max-width: 49vw;
+    padding: 9px;
+    background-color: white;
+  }
+  
+  /* Input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0;
+    border: none;
+    background: Gainsboro;
+    font-family: Helvetica, Avant Garde;
+    font-size: 1vw; 
+  }
+  
+  /* Submit button */
+  .form-container .btn {
+    background-color: white;
+    color: black;
+    border-color: black;
+    margin-bottom:1vh;
+  }
+  
+  /* Close button */
+  .form-container .cancel {
+    background-color: black;
+    color: white;
+    border-color: gray;
+  }
+  
+  /* Button styling */
+  button {
+    font-family: "Trebuchet MS", Optima; 
+    letter-spacing: .3vw; 
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1.5vw 1.5vw;
+    border-style: solid;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Hover effect for buttons */
+  button:hover, .form-container .btn:hover{
+    color: white;
+    background-color: black;
+    -webkit-transition-duration: 1s; 
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: silver;
+  }
+  .form-container .cancel:hover{
+    color: white;
+    background-color: darkred;
+    -webkit-transition-duration: 1s; 
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: black;
+  }

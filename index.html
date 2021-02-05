@@ -6,8 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-        <link rel="stylesheet" href="./css/straight_css_index.css">
+        <link rel="stylesheet" href="./css/main.css">
         <title>Web Developer Portfolio | Full Stack</title>
 
         <style>
@@ -27,7 +26,7 @@
                 <a class="active" href="#Home">Home</a> 
                 <a href="#About">About</a>
                 <a href="#GitHub">GitHub</a>
-                <a href="#Contact">Contact</a>
+               
             </div>
             <!-- END Navbar -->
 
@@ -35,7 +34,7 @@
             <div>
                 <!-- Container 1 -->
                 <div class="container_1">
-                    <img src="..." alt="Brick-Wall-Background">
+                    <img src="" alt="Brick-Wall-Background">
                 </div>
                     <!-- con_1_overlay_text -->
                 <div id="Home" class="con_1_overlay_text">
@@ -73,18 +72,24 @@
                         <img id="dark_github" src="./image/dark_github_1.png" alt="github">
                     </div>
                 </div>
-                <!-- Container 4 -->
-                <div class="Row" id="Contact">
-                    <div class="column_5">
-                        <h1>Contact Me</h1>
-                        <form action="" method="get"> <!-- This specifies where to send the form data and how; it is left blank -->
-                            <label>Name:</label>
-                                <input type="text" placeholder="Please enter your name here">
-                            <label>Email:</label>
-                                <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                            <label>Message:</label>
-                                <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                                <input type="submit" value="Submit">
+
+               <!-- Contact section -->
+                <div id="Contact"> 
+                    <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+                    <div class="form-popup" id="myForm">
+                        <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                        <h1>Contact</h1>
+                            <label for="name"><b>Name</b></label>
+                            <input type="text" placeholder="Type your name here" name="name" required>
+                            <label for="phone"><b>Phone</b></label>
+                            <input type="text" placeholder="Enter your phone number here" name="phone">
+                            <label for="email"><b>Email</b></label>		
+                            <input type="text" placeholder="Type your email address here" name="email" required>
+                            <label for="message"><b>Message</b></label>
+                            <input type="text" placeholder="Type your message here" name="message">
+                
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                         </form>
                     </div>
                 </div>
@@ -110,5 +115,6 @@
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <script src="./JS/main.js"></script>
         </body>
 </html>
